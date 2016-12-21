@@ -44,6 +44,7 @@ public class Xiangxi extends Activity {
     private TextView date;
     private TextView mac;
     private TextView scx;
+//    int aa = 0;
 
     private String mac_no;
     private String date_no;
