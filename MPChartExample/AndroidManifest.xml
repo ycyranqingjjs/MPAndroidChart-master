@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xxmassdeveloper.mpchartexample"
+    android:versionCode="52"
+    android:versionName="3.0.0">
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="23"
+        tools:overrideLibrary="com.github.mikephil.charting.data.realm" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".notimportant.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".deomActivity.LineChartActivity1" />
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <activity android:name=".deomActivity.LineChartActivity2" />
+        <activity android:name=".deomActivity.LineChartTime" />
+        <activity android:name=".deomActivity.BarChartActivity" />
+        <activity android:name=".deomActivity.HorizontalBarChartActivity" />
+        <activity android:name=".deomActivity.PieChartActivity" />
+        <activity android:name=".deomActivity.PiePolylineChartActivity" />
+        <activity android:name=".deomActivity.MultiLineChartActivity" />
+        <activity android:name=".deomActivity.BarChartActivityMultiDataset" />
+        <activity android:name=".deomActivity.DrawChartActivity" />
+        <activity android:name=".deomActivity.ScatterChartActivity" />
+        <activity android:name=".deomActivity.BubbleChartActivity" />
+        <activity android:name=".fragments.SimpleChartDemo" />
+        <activity android:name=".deomActivity.ListViewBarChartActivity" />
+        <activity android:name=".deomActivity.ListViewMultiChartActivity" />
+        <activity android:name=".deomActivity.StackedBarActivity" />
+        <activity android:name=".deomActivity.AnotherBarActivity" />
+        <activity android:name=".deomActivity.InvertedLineChartActivity" />
+        <activity android:name=".deomActivity.CandleStickChartActivity" />
+        <activity android:name=".deomActivity.CubicLineChartActivity" />
+        <activity android:name=".deomActivity.RadarChartActivitry" />
+        <activity android:name=".deomActivity.LineChartActivityColored" />
+        <activity android:name=".deomActivity.DynamicalAddingActivity" />
+        <activity android:name=".realm.RealmDatabaseActivityLine" />
+        <activity android:name=".realm.RealmDatabaseActivityBar" />
+        <activity android:name=".realm.RealmDatabaseActivityHorizontalBar" />
+        <activity android:name=".realm.RealmDatabaseActivityScatter" />
+        <activity android:name=".realm.RealmDatabaseActivityCandle" />
+        <activity android:name=".realm.RealmDatabaseActivityBubble" />
+        <activity android:name=".realm.RealmDatabaseActivityPie" />
+        <activity android:name=".realm.RealmDatabaseActivityRadar" />
+        <activity android:name=".realm.RealmMainActivity" />
+        <activity android:name=".deomActivity.RealtimeLineChartActivity" />
+        <activity android:name=".deomActivity.CombinedChartActivity" />
+        <activity android:name=".deomActivity.PerformanceLineChart" />
+        <activity android:name=".deomActivity.BarChartActivitySinus" />
+        <activity android:name=".deomActivity.ScrollViewActivity" />
+        <activity android:name=".deomActivity.StackedBarActivityNegative" />
+        <activity android:name=".realm.RealmWikiExample" />
+        <activity android:name=".deomActivity.BarChartPositiveNegative" />
+        <activity android:name=".deomActivity.FilledLineActivity" />
+        <activity android:name=".deomActivity.HalfPieChartActivity" />
+        <activity android:name=".activity.CaseActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".activity.SplashActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".JichuangHome" />
+        <activity android:name=".Xiangxi"></activity>
+    </application>
+
+</manifest>

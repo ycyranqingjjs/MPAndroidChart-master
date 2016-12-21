@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SplashActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="用户登录"
+    android:gravity="center"
+    android:textSize="25dp"/>
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:hint="用户名"
+        android:id="@+id/name"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="220dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="密码"
+        android:id="@+id/pass"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="地址"
+        android:id="@+id/et_dress"
+        android:text="http://10.10.57.15:8080/gc/serverdata.json"
+        android:textSize="20sp"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:id="@+id/bt_login"
+        android:text="登录"/>
+
+</LinearLayout>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CaseActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="电子数据看板"
+        android:textSize="25dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="3dp"
+        android:background="#99ffff"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x10">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="时间:"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="2016-09-2"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    android:id="@+id/date"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:targetApi="ice_cream_sandwich"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="机床动态数据"
+                android:textSize="23dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="3dp"
+                android:id="@+id/xxdata"
+                android:textColor="#3366cc"
+                />
+            <!--android:onClick="showDate"-->
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="@dimen/x15"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/x10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="生产线:"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="01"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:paddingTop="3dp"
+                    android:id="@+id/scx"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:targetApi="ice_cream_sandwich"
+                    />
+                定义一个城市信息下拉菜单
+                <Spinner
+                    android:id = "@+id/Spinner_scx"
+                    android:layout_width = "wrap_content"
+                    android:layout_height ="wrap_content" >
+                </Spinner >
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/x10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="机床:"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="M06-2"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:paddingTop="3dp"
+                    android:id="@+id/mac"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:targetApi="ice_cream_sandwich"
+                    />
+                定义一个城市信息下拉菜单
+                <Spinner
+                    android:id = "@+id/Spinner_city"
+                    android:layout_width = "wrap_content"
+                    android:layout_height ="wrap_content" >
+                </Spinner >
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#cd0070" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/rcl"
+                    style="@style/row1"
+                    android:text="日产量" />
+
+                <TextView
+                    android:id="@+id/r11"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rcl"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/bhgp"
+                    style="@style/row2"
+                    android:text="不合格品" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/bhgp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/row3"
+                    android:text="日计划\n完成率" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/holo_orange" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/richanliang"
+                    style="@style/row1"
+                    android:layout_marginTop="20dp"
+                    android:text="29" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/richanliang"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/wanchenlv"
+                    style="@style/row3"
+                    android:text="0.13" />
+
+                <TextView
+                    android:id="@+id/buhegelv"
+                    style="@style/row2"
+                    android:gravity="center"
+                    android:text="3" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/buhegelv"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#cd0070" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/kdl"
+                    style="@style/row1"
+                    android:layout_marginTop="20dp"
+                    android:text="开动率" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/kdl"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/row3"
+                    android:text="单体设备能耗" />
+
+                <TextView
+                    android:id="@+id/oe"
+                    style="@style/row2"
+                    android:text="OEE" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/oe"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/holo_orange" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/kaidonglv"
+                    style="@style/row1"
+                    android:layout_marginTop="20dp"
+                    android:text="29" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/kaidonglv"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/dantinenghao"
+                    style="@style/row3"
+                    android:text="0.13" />
+
+                <TextView
+                    android:id="@+id/oee"
+                    style="@style/row2"
+                    android:text="3" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/oee"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#cd0070" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/gztj"
+                    style="@style/row1"
+                    android:layout_marginTop="20dp"
+                    android:text="工件统计" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/gztj"
+                    android:background="@android:color/white" />
+
+                <TextView
+
+                    style="@style/row3"
+                    android:text="工件号/单件生产节拍" />
+
+                <TextView
+                    android:id="@+id/bjpc"
+                    style="@style/row2"
+                    android:text="报警频次" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/bjpc"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/holo_orange" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <Button
+                    android:id="@+id/gongzuotongji"
+                    style="@style/row1"
+                    android:text="查看" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/gongzuotongji"
+                    android:background="@android:color/white" />
+
+
+                <TextView
+
+                    android:id="@+id/gongjianhao"
+                    style="@style/row3"
+                    android:text="4/9" />
+
+                <Button
+                    android:id="@+id/baojinlv"
+                    style="@style/row2"
+                    android:text="查看" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/baojinlv"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#cd0070" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/jcdt"
+                    style="@style/row1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="机床动态统计" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/jcdt"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/row3"
+                    android:text="机床停机\n原因统计" />
+
+                <TextView
+                    android:id="@+id/kgjsj"
+                    style="@style/row2"
+                    android:text="机床开关\n时间统计"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/kgjsj"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/holo_orange" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <Button
+                    android:id="@+id/jichuandongtaitongji"
+                    style="@style/row1"
+                    android:text="查看" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/jichuandongtaitongji"
+                    android:background="@android:color/white" />
+
+                <Button
+
+                    android:id="@+id/jichuangtingjiyy"
+                    style="@style/row3"
+                    android:text="查看" />
+
+                <Button
+                    android:id="@+id/jichuangkaiguansji"
+                    style="@style/row2"
+                    android:text="查看" />
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/jichuangkaiguansji"
+                    android:background="@android:color/white" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#cd0070" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/holo_blue_light"
+                android:orientation="vertical">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/seekBar1"
+                    android:visibility="visible" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/seekBar1"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

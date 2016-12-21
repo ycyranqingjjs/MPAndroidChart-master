@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xxmassdeveloper.mpchartexample.Xiangxi">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="机床实时动态数据"
+        android:textSize="25dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="3dp"
+        android:background="#99ffff"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x10">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="时间:"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="2016-09-2"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    android:id="@+id/date"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:targetApi="ice_cream_sandwich" />
+
+            </LinearLayout>
+
+            <!--android:onClick="showDate"-->
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="@dimen/x15"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/x10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="生产线:"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="M06-2"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:paddingTop="3dp"
+                    android:id="@+id/scx"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:targetApi="ice_cream_sandwich"
+                    />
+                定义一个城市信息下拉菜单
+                <Spinner
+                    android:id = "@+id/Spinner_scx"
+                    android:layout_width = "wrap_content"
+                    android:layout_height ="wrap_content" >
+                </Spinner >
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/x10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="机床:"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="M06-2"
+                    android:textSize="23dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:paddingTop="3dp"
+                    android:id="@+id/mac"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:targetApi="ice_cream_sandwich"
+                    />
+                定义一个城市信息下拉菜单
+                <Spinner
+                    android:id = "@+id/Spinner_city"
+                    android:layout_width = "wrap_content"
+                    android:layout_height ="wrap_content" >
+                </Spinner >
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/rcl"
+                    style="@style/xxrow1" />
+
+                <TextView
+                    android:id="@+id/r11"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rcl"
+                    android:background="@android:color/white" />
+
+              <TextView
+                  style="@style/xxrow2"
+                  android:text="位置"
+                  android:id="@+id/weizhi"
+                  android:layout_toRightOf="@+id/r11"
+                 />
+
+                <TextView
+                    android:id="@+id/r12"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhi"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="速度"
+                    android:id="@+id/sudu"
+                    android:layout_toRightOf="@+id/r12" />
+                <TextView
+                    android:id="@+id/r13"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/sudu"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="负载"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzai"
+                    android:layout_toRightOf="@+id/r13" />
+                <TextView
+                    android:id="@+id/r14"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzai"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="备用"
+                    android:id="@+id/beiyong"
+                    android:layout_toRightOf="@+id/r14" />
+            </RelativeLayout>
+
+
+
+
+
+            <!--X轴-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/xzhou"
+                    style="@style/xxrow1"
+                    android:layout_marginTop="20dp"
+                    android:text="X\n轴" />
+
+                <TextView
+                    android:id="@+id/r21"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/xzhou"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="22.2\n23.3\n23.2"
+                    android:id="@+id/weizhix"
+                    android:layout_toRightOf="@+id/r21"
+                    />
+
+                <TextView
+                    android:id="@+id/r22"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhix"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.2\nm/s"
+                    android:id="@+id/sudux"
+                    android:layout_toRightOf="@+id/r22" />
+                <TextView
+                    android:id="@+id/r23"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/sudux"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.5"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzaix"
+                    android:layout_toRightOf="@+id/r23" />
+                <TextView
+                    android:id="@+id/r24"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzaix"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="02"
+                    android:id="@+id/beiyongx"
+                    android:layout_toRightOf="@+id/r24" />
+            </RelativeLayout>
+
+
+
+
+
+
+            <!--Y轴-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/yzhou"
+                    style="@style/xxrow1"
+                    android:layout_marginTop="20dp"
+                    android:text="Y\n轴" />
+
+                <TextView
+                    android:id="@+id/r31"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/yzhou"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="22.2"
+                    android:id="@+id/weizhiy"
+                    android:layout_toRightOf="@+id/r31"
+                    />
+
+                <TextView
+                    android:id="@+id/r32"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhiy"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.2\nm/s"
+                    android:id="@+id/suduy"
+                    android:layout_toRightOf="@+id/r32" />
+                <TextView
+                    android:id="@+id/r33"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/suduy"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.5"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzaiy"
+                    android:layout_toRightOf="@+id/r33" />
+                <TextView
+                    android:id="@+id/r34"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzaiy"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="02"
+                    android:id="@+id/beiyongy"
+                    android:layout_toRightOf="@+id/r34" />
+            </RelativeLayout>
+
+
+
+
+
+            <!--Z轴-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/zzhou"
+                    style="@style/xxrow1"
+                    android:layout_marginTop="20dp"
+                    android:text="Z\n轴" />
+
+                <TextView
+                    android:id="@+id/r41"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/zzhou"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="22.2"
+                    android:id="@+id/weizhiz"
+                    android:layout_toRightOf="@+id/r41"
+                    />
+
+                <TextView
+                    android:id="@+id/r42"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhiz"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.2\nm/s"
+                    android:id="@+id/suduz"
+                    android:layout_toRightOf="@+id/r42" />
+                <TextView
+                    android:id="@+id/r43"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/suduz"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.5"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzaiz"
+                    android:layout_toRightOf="@+id/r43" />
+                <TextView
+                    android:id="@+id/r44"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzaiz"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="02"
+                    android:id="@+id/beiyongz"
+                    android:layout_toRightOf="@+id/r44" />
+            </RelativeLayout>
+
+
+
+
+            <!--B轴-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/bzhou"
+                    style="@style/xxrow1"
+                    android:layout_marginTop="20dp"
+                    android:text="B\n轴" />
+
+                <TextView
+                    android:id="@+id/r51"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/bzhou"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="22.2"
+                    android:id="@+id/weizhib"
+                    android:layout_toRightOf="@+id/r51"
+                    />
+
+                <TextView
+                    android:id="@+id/r52"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhib"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.2\nm/s"
+                    android:id="@+id/sudub"
+                    android:layout_toRightOf="@+id/r52" />
+                <TextView
+                    android:id="@+id/r53"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/sudub"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.5"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzaib"
+                    android:layout_toRightOf="@+id/r53" />
+                <TextView
+                    android:id="@+id/r54"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzaib"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="02"
+                    android:id="@+id/beiyongb"
+                    android:layout_toRightOf="@+id/r54" />
+            </RelativeLayout>
+
+
+
+
+
+
+            <!--A轴-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/azhou"
+                    style="@style/xxrow1"
+                    android:layout_marginTop="20dp"
+                    android:text="A\n轴" />
+
+                <TextView
+                    android:id="@+id/r61"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/azhou"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="23.2"
+                    android:id="@+id/weizhia"
+                    android:layout_toRightOf="@+id/r61"
+                    />
+
+                <TextView
+                    android:id="@+id/r62"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhia"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.2\nm/s"
+                    android:id="@+id/sudua"
+                    android:layout_toRightOf="@+id/r62" />
+                <TextView
+                    android:id="@+id/r63"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/sudua"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.5"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzaia"
+                    android:layout_toRightOf="@+id/r63" />
+                <TextView
+                    android:id="@+id/r64"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzaia"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="02"
+                    android:id="@+id/beiyonga"
+                    android:layout_toRightOf="@+id/r64" />
+            </RelativeLayout>
+
+
+
+
+
+
+
+            <!--u轴-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/blue_dark">
+
+                <TextView
+                    android:id="@+id/uzhou"
+                    style="@style/xxrow1"
+                    android:layout_marginTop="20dp"
+                    android:text="主\n轴" />
+
+                <TextView
+                    android:id="@+id/r71"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/uzhou"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="12.1"
+                    android:id="@+id/weizhiu"
+                    android:layout_toRightOf="@+id/r71"
+                    />
+
+                <TextView
+                    android:id="@+id/r72"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/weizhiu"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.2\nm/s"
+                    android:id="@+id/suduu"
+                    android:layout_toRightOf="@+id/r72" />
+                <TextView
+                    android:id="@+id/r73"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/suduu"
+                    />
+
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="16.5"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:id="@+id/fuzaiu"
+                    android:layout_toRightOf="@+id/r73" />
+                <TextView
+                    android:id="@+id/r74"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:layout_toRightOf="@+id/fuzaiu"
+                    />
+                <TextView
+                    style="@style/xxrow2"
+                    android:text="02"
+                    android:id="@+id/beiyongu"
+                    android:layout_toRightOf="@+id/r74" />
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
